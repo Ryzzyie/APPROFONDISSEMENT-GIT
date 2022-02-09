@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Css fontAwesome-->
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licorne Site</title>
+
+    <style>
+        *{
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-image: url("img/background.png");
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+        *Mise en forme de header ou entete
+        */
+        #header ul{
+            background-color: #C55394;
+            list-style-type: none;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+           
+        }
+
+        #header li{
+            float: left;
+        }
+
+        #header li a{
+            color: #FFF;
+            display: block;
+            padding: 20px 10px;
+            text-decoration: none;
+        }
+
+        #header li a.active{
+            background-color: #E577B5;
+        }
+
+        #header li a:hover{
+            background-color: #E577B5;
+        }
+
+        .logo-text{
+            font-family: 'Courgette', cursive;
+            font-style: italic;
+            padding-right: 62%;
+        }
+         /*
+        *Mise en forme de header ou entete
+        */
+
+        /*
+        *Mise en forme du contenu
+        */
+        .arc-en-ciel{
+            background-image: url("img/rainbow.png");
+            background-repeat: no-repeat;
+            background-position: 50% 1%;
+            margin-top: 10px;
+            padding: 20px 20px;
+            text-align:center;  
+        }
+
+        button{
+            padding: 10px;
+            font-size: medium;
+            border-radius: 5px;
+            border:none;
+            background-color: #C55394;
+            color: #FFF;
+        }
+
+        .description{
+            background-color: #FFF;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin: 0% 12% 12% 12%;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        h1,h4{
+            font-family: 'Courgette', cursive;
+            color: #C55394;
+        }
+
+        figure {
+            margin: 2%;
+        }
+
+        figcaption {
+            display: block;
+            background-color: #333;
+            color: #FFF;
+            text-align: center;
+            margin-top: -5%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
+        }
+
+        .flex-container-image, .flex-container-contact{
+            display: flex;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        input{
+            height: 20%;
+            padding: 8px;
+        }
+
+        .map{
+            display: inline;
+            margin-right: 20px;
+        }
+        /*
+        *Mise en forme du contenu
+        */
+
+         /*
+        *Mise en forme de footer ou bas de page
+        */
+        #footer{
+            background-color: #E577B5;
+            color: #FFF;
+            padding-left: 89%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /*
+        *Mise en forme de footer ou bas de page
+        */
+    </style>
+</head>
+<body>
+    
+    <div id="header">
+        <ul>
+            <li class="logo-text"><a href="">MyUnicorn</a></li>
+            <li class="nav-link"><a class="active" href="">LE PRINCIPE</a></li>
+            <li class="nav-link"><a href="">NOS LICORNES</a></li>
+            <li class="nav-link"><a href="">NOUS TROUVER</a></li>
+        </ul>
+    </div>
+
+    <div id="contenu">
+        <section class="arc-en-ciel">
+            <h1>Un jour, une licorne</h1>
+        </section>
+
+        <section class="description">
+            <h1><i class="fa fa-star-o" aria-hidden="true"></i> Le principe</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum dapibus ante, eu aliquam ante euismod eleifend.
+                 Ut malesuada augue ut luctus pellentesque. Aenean id varius ipsum. Nunc malesuada ex ut ipsum interdum vestibulum. Integer facilisis finibus orci, sit amet pretium diam placerat vitae. Nunc auctor tincidunt mollis. Nullam quis turpis sed lorem elementum semper eget semper risus. In nec mauris aliquam, congue metus euismod, cursus leo. Vivamus laoreet commodo leo, ut cursus justo blandit in. Aenean pretium mi a auctor pulvinar. Mauris sodales sollicitudin sodales. Sed mollis sed lectus id facilisis. Quisque pharetra a purus eget porttitor. Proin rhoncus risus non mauris iaculis sodales. Pellentesque euismod dui erat, non sodales ipsum sollicitudin sed.
+            </p>
+            <p>Donec nisi eros, luctus id pretium eget, consequat elementum risus. Fusce eleifend lacinia orci eu iaculis. Vestibulum vestibulum justo quis commodo congue. Aliquam purus leo, dictum in nisl at, pellentesque bibendum mi. Nulla convallis mi eget nisl convallis dictum. 
+                Vestibulum a massa lacus. Aenean quis enim diam.</p>
+
+            <h1><i class="fa fa-star-o" aria-hidden="true"></i> Nos licornes</h1>
+            <div class="flex-container-image">
+                <div>
+                    <figure>
+                        <img src="img/unicorns/photo1.jpg" alt="">
+                        <figcaption>Lulu Confetty</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="img/unicorns/photo2.jpg" alt="">
+                        <figcaption>Lapillon Magik</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="img/unicorns/photo3.jpg" alt="">
+                        <figcaption>El Ninjacorn</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="img/unicorns/photo4.jpg" alt="">
+                        <figcaption>Sweety Candy</figcaption>
+                    </figure>
+                </div>
+                
+            </div>
+
+            <h1><i class="fa fa-star-o" aria-hidden="true"></i> Nous trouver</h1>
+            <div class="flex-container-contact">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.5352920118326!2d47.52404341434278!3d-18.907686212213353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07e00bfe681a5%3A0x4c1b3b6f62c45fa2!2sAnalakely%20Market!5e0!3m2!1sen!2smg!4v1644401122339!5m2!1sen!2smg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <div class="contact">
+                    <h4>Notre élevage de licornes est situé au :</h4>
+                    <p>Analakely Market</p>
+                    <p>Arabe Rahezavana, Antananarivo, Madagascar</p>
+                    <p>01.22.45.67.90</p>
+
+                    <h4>Newsletter</h4>
+                    <p>Abonnez-vous simplement à notre newsletter mensuelle !</p>
+                    <form action="">
+                        <input type="mail" placeholder="monmail@gmail.com"><br><br>
+                        <button>Valider</button>
+                    </form>
+                </div>
+            </div> 
+        </section>
+    </div>
+
+    <div id="footer">
+        <a>2016 @WebForce3</a> 
+    </div>
+
+</body>
+</html>
