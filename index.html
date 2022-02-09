@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS de la fontAwesome-->
+    <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
     <title>Premier exercice</title>
 
     <style>
@@ -10,7 +13,7 @@
             font-family: Arial, sans-serif;
         }
 
-        h1{
+        h1,h3,h2{
             font-family: 'Courgette',cursive;
             font-style: italic;
             color: #C55394;
@@ -19,27 +22,37 @@
         body {
             background-image: url("background.png");
             background-repeat: repeat,repeat-y;
+            margin: 0px;
+            padding: 0px;
         }
 
         /* Mise en forme du div header*/
-        #header {
-            margin:-1% -1%;
-            padding: -1% -1%;
-        }
-
         #header ul {
             list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
             background-color: #C55394;
-            padding: 10px 10px;
         }
 
-        #header li{
-            display: inline-block;  
+        #header li {
+            float: left;
         }
 
-        li a{
-            text-decoration: none;
+        #header li a {
             color: #FFF;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            padding: 20px 10px 20px;
+        }
+
+        #header .active {
+            background-color: #E577B5;
+        }
+
+        #header li a:hover {
+            background-color: #E577B5;
         }
         /* Mise en forme du div header*/
 
@@ -59,7 +72,7 @@
 
         #footer li {
             color:#FFF;
-            padding-left: 90%;
+            padding-left: 88%;
         }
         /* Mise en forme du div footer*/
 
@@ -71,7 +84,6 @@
         .description {
             margin-left: 10%;
             margin-right: 10%;
-            margin-top: 10%;
             margin-bottom: 10%;
             background-color: #FFF;
             border-radius: 2%;
@@ -79,6 +91,70 @@
             padding-right: 2%;
             padding-top: 3%;
             padding-bottom: 3%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        
+
+        .arc{
+            text-align:center;
+            background-image: url("img/rainbow.png");
+            background-repeat: no-repeat;
+            background-position:center;
+            margin-top:5%;
+            padding: 30px 30px;
+        }
+
+        figure {
+            margin: 2%;
+        }
+
+        figcaption {
+            display: block;
+            background-color: #333;
+            color: #FFF;
+            margin-top: 0px;
+            padding: 10px 10px 10px;
+        }
+
+        img {
+            width: 105%;
+        }
+
+        button{
+            background-color: #C55394;
+            color: #FFF;
+            height: 30%;
+            border-radius: 5%;
+        }
+
+        /* Mise en forme oour mettre côte à côte le map et le contact*/
+        .flex-container {
+            display: flex;
+            
+        }
+
+        .flex-container-image {
+            display: flex;
+        }
+
+        .map {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        /*
+        Mise en forme de l'input mail
+        */
+        input {
+            padding: 10px;
+            width: 35%;
+        }
+
+        button {
+            padding: 10px;
+            font-size: medium;
+            border-radius: 5px;
+            border:none;
         }
 
     </style>
@@ -88,38 +164,73 @@
     
     <div id="header">
         <ul>
-            <li style="padding-right: 70%"><h1 style="color: #FFF;">MyUnicorn</h1></li>
-            <li><a href="#">LE PRINCIPE</a></li>
-            <li><a href="#">NOS LICORNS</a></li>
-            <li><a href="#">FINDS US</a></li>
+            <li style="padding-right: 67%; font-family: 'Courgette', cursive;"><a href="#">MyUnicorn</a></li>
+            <li class="active"><a href="#">LE PRINCIPE</a></li>
+            <li class="nav"><a href="#">NOS LICORNS</a></li>
+            <li class="nav"><a href="#">FINDS US</a></li>
         </ul>
     </div>
 
+    <div class="arc">
+        <h1>Un jour, une licorne</h1>
+    </div>
+
     <div id="contenu"> 
-        <section class="description">
-        <h1>Le principe</h1> 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum dapibus ante, eu aliquam ante euismod eleifend. Ut malesuada augue ut luctus pellentesque. Aenean id varius ipsum. Nunc malesuada ex ut ipsum interdum vestibulum. Integer facilisis finibus orci, sit amet pretium diam placerat vitae. Nunc auctor tincidunt mollis. Nullam quis turpis sed lorem elementum semper eget semper risus. In nec mauris aliquam, congue metus euismod, cursus leo. Vivamus laoreet commodo leo, ut cursus justo blandit in. Aenean pretium mi a auctor pulvinar. Mauris sodales sollicitudin sodales. Sed mollis sed lectus id facilisis. Quisque pharetra a purus eget porttitor. Proin rhoncus risus non mauris iaculis sodales. Pellentesque euismod dui erat, non sodales ipsum sollicitudin sed.</p>
+        
+        <div class="description">
+            <h1><i class="fa fa-star-o"></i> Le principe</h1> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum dapibus ante, eu aliquam ante euismod eleifend. Ut malesuada augue ut luctus pellentesque. Aenean id varius ipsum. Nunc malesuada ex ut ipsum interdum vestibulum. Integer facilisis finibus orci, sit amet pretium diam placerat vitae. Nunc auctor tincidunt mollis. Nullam quis turpis sed lorem elementum semper eget semper risus. In nec mauris aliquam, congue metus euismod, cursus leo. Vivamus laoreet commodo leo, ut cursus justo blandit in. Aenean pretium mi a auctor pulvinar. Mauris sodales sollicitudin sodales. Sed mollis sed lectus id facilisis. Quisque pharetra a purus eget porttitor. Proin rhoncus risus non mauris iaculis sodales. Pellentesque euismod dui erat, non sodales ipsum sollicitudin sed.</p>
+            <p>Donec nisi eros, luctus id pretium eget, consequat elementum risus. Fusce eleifend lacinia orci eu iaculis. Vestibulum vestibulum justo quis commodo congue. Aliquam purus leo, dictum in nisl at, pellentesque bibendum mi. Nulla convallis mi eget nisl convallis dictum. Vestibulum a massa lacus. Aenean quis enim diam.</p>
+
+
+            <h1><i class="fa fa-star-o"></i> Nos licornes</h1> 
+            <div class="flex-container-image">
+                <figure>
+                    <img src="img/unicorns/photo1.jpg"> 
+                    <figcaption>Lulu Confetty</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="img/unicorns/photo2.jpg"> 
+                    <figcaption>Lapillon Magik</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="img/unicorns/photo3.jpg"> 
+                    <figcaption>El Ninjacorn</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="img/unicorns/photo4.jpg">
+                    <figcaption>Sweety Candy</figcaption>
+                </figure>
+            </div>
+            
+
+            <h1><i class="fa fa-star-o"></i> Nous trouver</h1>
+            <div class="flex-container">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.5352920118326!2d47.52404341434278!3d-18.907686212213353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07e00bfe681a5%3A0x4c1b3b6f62c45fa2!2sAnalakely%20Market!5e0!3m2!1sen!2smg!4v1644401122339!5m2!1sen!2smg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <div class="contact">
+                    <h3>Notre élevage de licornes est situé au :</h3>
+                    Analakely Market
+                    Arabe Rahezavana, Antananarivo, Madagascar
+                    01.22.45.67.90
     
-
-    <p>Donec nisi eros, luctus id pretium eget, consequat elementum risus. Fusce eleifend lacinia orci eu iaculis. Vestibulum vestibulum justo quis commodo congue. Aliquam purus leo, dictum in nisl at, pellentesque bibendum mi. Nulla convallis mi eget nisl convallis dictum. Vestibulum a massa lacus. Aenean quis enim diam.</p>
-
-
-    <h1>Nos licornes</h1> 
-
-    <p>Lulu Confetty - Lapillon Magik - El Ninjacorn - Sweety Candy</p>
-
-
-    <h1> Nous trouver</h1>
-
-    Notre élevage de licornes est situé au :
-    Analakely Market
-    Arabe Rahezavana, Antananarivo, Madagascar
-    01.22.45.67.90
-
-    <p>Newsletter</p>
-
-    Abonnez-vous simplement à notre newsletter mensuelle !
-        </section>
+                    <h3>Newsletter</h3>
+    
+                    <p>Abonnez-vous simplement à notre newsletter mensuelle !</p>
+                    <form>
+                        <input type="mail" placeholder="votremail@gmail.com"><br><br>
+                        <button>Valider</button>    
+                    </form>  
+                </div>
+            </div>
+            
+                
+        </div>
     </div>
 
     <div id="footer">
