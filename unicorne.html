@@ -20,6 +20,11 @@
             padding: 0;
         }
 
+        h1,h4{
+            font-family: 'Courgette', cursive;
+            color: #C55394;
+        }
+
         /*
         *Mise en forme de header ou entete
         */
@@ -51,11 +56,6 @@
             background-color: #E577B5;
         }
 
-        .logo-text{
-            font-family: 'Courgette', cursive;
-            font-style: italic;
-            padding-right: 62%;
-        }
          /*
         *Mise en forme de header ou entete
         */
@@ -90,34 +90,43 @@
             padding-right: 15px;
             padding-top: 20px;
             padding-bottom: 20px;
-        }
-
-        h1,h4{
-            font-family: 'Courgette', cursive;
-            color: #C55394;
-        }
+        } 
 
         figure {
             margin: 2%;
         }
 
+        /*
+        Transparent Text with background
+        */
         figcaption {
-            display: block;
-            background-color: #333;
+            background:rgb(0, 0, 0);
+            background:rgb(0, 0, 0,0.5);
             color: #FFF;
-            text-align: center;
-            margin-top: -5%;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            
+            display: block;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            position:relative;
+            text-align: center;  
         }
+
+        .lulu-photo, .ninjacorn-photo, .lapillon-photo, .candy-photo{
+            bottom: 35px;
+        }
+        /*
+        Transparent Text with background
+        */
 
         .flex-container-image, .flex-container-contact{
             display: flex;
+            position:relative;
         }
 
         img{
             width: 100%;
+            height: auto;
+            
+            transition: all 0.2s ease;
         }
 
         input{
@@ -129,6 +138,27 @@
             display: inline;
             margin-right: 20px;
         }
+
+        /*
+        *Zoom lors survole a l'image
+        */
+        .image-hover-zoom{
+            height: fit-content;
+            overflow: hidden;
+        }
+
+        .image-hover-zoom img{
+            transition: transform .5s ease;
+        }
+
+        .image-hover-zoom:hover img{
+            transform: scale(1.5);
+        }
+
+        /*
+        *Zoom lors survole a l'image
+        */
+
         /*
         *Mise en forme du contenu
         */
@@ -153,10 +183,10 @@
     
     <div id="header">
         <ul>
-            <li class="logo-text"><a href="">MyUnicorn</a></li>
-            <li class="nav-link"><a class="active" href="">LE PRINCIPE</a></li>
-            <li class="nav-link"><a href="">NOS LICORNES</a></li>
-            <li class="nav-link"><a href="">NOUS TROUVER</a></li>
+            <li style="font-family:'Courgette',cursive; font-style:italic; padding-right:62%;"  class="titre"><a href="" style="">MyUnicorn</a></li>
+            <li><a class="active" href="">LE PRINCIPE</a></li>
+            <li><a href="">NOS LICORNES</a></li>
+            <li><a href="">NOUS TROUVER</a></li>
         </ul>
     </div>
 
@@ -175,31 +205,39 @@
 
             <h1><i class="fa fa-star-o" aria-hidden="true"></i> Nos licornes</h1>
             <div class="flex-container-image">
-                <div>
+                <div class="image-hover-zoom">
                     <figure>
                         <img src="img/unicorns/photo1.jpg" alt="">
-                        <figcaption>Lulu Confetty</figcaption>
+                        <figcaption class="lulu-photo">Lulu Confetty</figcaption>
                     </figure>
                 </div>
-                <div>
+                <div class="image-hover-zoom">
                     <figure>
-                        <img src="img/unicorns/photo2.jpg" alt="">
-                        <figcaption>Lapillon Magik</figcaption>
+                        <a href="">
+                            <div class="overlay"></div>
+                            <img src="img/unicorns/photo2.jpg" alt="">
+                            <figcaption class="lapillon-photo">Lapillon Magik</figcaption>
+                        </a>
                     </figure>
                 </div>
-                <div>
+                <div class="image-hover-zoom">
                     <figure>
-                        <img src="img/unicorns/photo3.jpg" alt="">
-                        <figcaption>El Ninjacorn</figcaption>
+                        <a href="">
+                            <div class="overlay"></div>
+                            <img src="img/unicorns/photo3.jpg" alt="">
+                        <figcaption class="ninjacorn-photo">El Ninjacorn</figcaption>
+                        </a>
                     </figure>
                 </div>
-                <div>
+                <div class="image-hover-zoom">
                     <figure>
-                        <img src="img/unicorns/photo4.jpg" alt="">
-                        <figcaption>Sweety Candy</figcaption>
+                        <a href="">
+                            <div class="overlay"></div>
+                            <img src="img/unicorns/photo4.jpg" alt="">
+                        <figcaption class="candy-photo">Sweety Candy</figcaption>
+                        </a>
                     </figure>
-                </div>
-                
+                </div> 
             </div>
 
             <h1><i class="fa fa-star-o" aria-hidden="true"></i> Nous trouver</h1>
@@ -216,8 +254,8 @@
 
                     <h4>Newsletter</h4>
                     <p>Abonnez-vous simplement à notre newsletter mensuelle !</p>
-                    <form action="">
-                        <input type="mail" placeholder="monmail@gmail.com"><br><br>
+                    <form action="newsletter.php">
+                        <input type="email" placeholder="monmail@gmail.com" required><br><br>
                         <button>Valider</button>
                     </form>
                 </div>
